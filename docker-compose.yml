@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  chrome:
+    image: selenium/standalone-chrome:106.0
+    shm_size: 2gb
+    expose:
+    - "4444"
+  gzhu_clockin:
+    image: colonya/gzhu_clockin:latest
+    volumes:
+    - /etc/gzhu_clockin/:/data
